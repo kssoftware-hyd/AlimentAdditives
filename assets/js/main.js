@@ -12,7 +12,7 @@ const waLink = CFG.whatsapp ? `https://wa.me/${CFG.whatsapp}?text=${encodeURICom
 
 /* ===== Header ===== */
 document.getElementById("site-header").innerHTML = `<div class="wrap bar">
-  <a class="logo" href="index.html" aria-label="Aliment Additives FZE home"><img src="assets/images/logo-light.png" alt="Aliment Additives logo" width="68" height="56"></a>
+  <a class="logo" href="index.html" aria-label="Aliment Additives FZE home"><img src="assets/images/logo-light.png" alt="Aliment Additives logo" width="68" height="56"><span class="brand">ALIMENT ADDITIVES <em>FZE</em></span></a>
   <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><i></i></button>
   <nav id="nav" aria-label="Main">${NAV.map((n) => `<a href="${n[0]}" class="${n[2] === page ? "on" : ""}">${n[1]}</a>`).join("")}<a class="nav-cta" href="contact.html">REQUEST A QUOTE<i data-lucide="arrow-right"></i></a></nav></div>`;
 document.getElementById("burger").onclick = () => {
@@ -24,7 +24,7 @@ document.getElementById("burger").onclick = () => {
 
 /* ===== Footer and floating elements ===== */
 document.getElementById("site-footer").innerHTML = `<div class="wrap"><div class="fgrid">
-  <div><a class="logo" href="index.html"><img src="assets/images/logo-light.png" alt="Aliment Additives logo" width="92" height="76" loading="lazy"></a><p>Your Trusted Partner in Food Ingredients. A UAE-based food ingredients and specialty additives trading company.</p></div>
+  <div><a class="logo" href="index.html"><img src="assets/images/logo-light.png" alt="Aliment Additives logo" width="92" height="76" loading="lazy"><span class="brand">ALIMENT ADDITIVES <em>FZE</em></span></a><p>Your Trusted Partner in Food Ingredients. A UAE-based food ingredients and specialty additives trading company.</p></div>
   <div><h3>QUICK LINKS</h3><a href="about.html">About Us</a><a href="products.html">Products</a><a href="industries.html">Industries</a><a href="index.html#why">Why Choose Us</a><a href="contact.html">Contact</a></div>
   <div><h3>PRODUCTS</h3>${PRODUCTS.slice(0, 6).map((p) => `<a href="products.html">${p.name}</a>`).join("")}<a href="products.html">All categories</a></div>
   <div><h3>CONTACT</h3><p class="cinfo"><i data-lucide="map-pin"></i>${ADDRESS}</p><a class="cinfo" href="mailto:${CFG.email}"><i data-lucide="mail"></i>${CFG.email}</a><a class="cinfo" href="mailto:${CFG.sales}"><i data-lucide="mail"></i>${CFG.sales}</a><p class="cinfo"><i data-lucide="clock"></i>Mon–Sat 09:00 AM – 06:00 PM, Sun Closed</p><a class="btn sm" href="${waLink}" ${CFG.whatsapp ? 'target="_blank" rel="noopener"' : ""}>WHATSAPP ENQUIRY<i data-lucide="message-circle"></i></a></div>

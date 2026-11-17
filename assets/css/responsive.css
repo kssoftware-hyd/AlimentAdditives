@@ -84,3 +84,19 @@
 
 /* Mobile menu CTA keeps its larger padding */
 @media (max-width:940px) { #nav a.nav-cta { padding:17px; } }
+
+/* Company name sizes on small screens */
+@media (max-width:560px) { .brand { font-size:.8rem; letter-spacing:.04em; } .logo { gap:9px; } footer .brand { font-size:1rem; } }
+@media (max-width:360px) { .brand { font-size:.68rem; letter-spacing:.02em; } }
+
+/* Narrow desktop (941-1060px): tighter nav so logo, name and links never touch */
+@media (max-width:1060px) and (min-width:941px) {
+  #nav { gap:12px; }
+  #nav a { font-size:.62rem; letter-spacing:.05em; }
+  #nav a.nav-cta { padding:8px 11px; }
+  .brand { font-size:.74rem; }
+}
+
+/* ===== Footer columns by screen size ===== */
+@media (max-width:1024px) { .fgrid { grid-template-columns:1fr 1fr; gap:32px; } }
+@media (max-width:560px) { .fgrid { grid-template-columns:1fr; gap:28px; } }
