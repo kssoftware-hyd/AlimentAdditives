@@ -1,0 +1,86 @@
+/* ===== Tablet ===== */
+@media (max-width:940px) {
+  .burger { display:block; }
+  #nav { position:fixed; top:0; left:0; right:0; bottom:0; height:100vh; height:100dvh; background:linear-gradient(160deg,#0c250c,#173F16); flex-direction:column; align-items:stretch; justify-content:flex-start; gap:0; padding:100px 26px calc(28px + env(safe-area-inset-bottom,0px)); overflow-y:auto; transform:translateY(-102%); transition:transform .6s var(--ease); }
+  #nav.open { transform:none; }
+  #nav a:not(.nav-cta) { display:flex; justify-content:space-between; align-items:center; font:500 1.6rem var(--head); letter-spacing:0; padding:15px 0; border-bottom:1px solid rgba(255,255,255,.1); }
+  #nav a:not(.nav-cta)::after { position:static; width:auto; height:auto; background:none; content:"\2192"; color:var(--lime); opacity:.6; font:400 1.1rem var(--body); transition:transform .3s; }
+  #nav a:not(.nav-cta):hover::after { width:auto; transform:translateX(4px); }
+  #nav a.on { color:var(--lime); }
+  #nav .nav-cta { margin-top:26px; padding:17px; justify-content:center; font-size:.82rem; }
+  #nav.open a { animation:rise .5s var(--ease) both; }
+  #nav.open a:nth-child(2) { animation-delay:.05s; }
+  #nav.open a:nth-child(3) { animation-delay:.1s; }
+  #nav.open a:nth-child(4) { animation-delay:.15s; }
+  #nav.open a:nth-child(5) { animation-delay:.2s; }
+  #nav.open a:nth-child(6) { animation-delay:.25s; }
+  #nav.open a:nth-child(7) { animation-delay:.3s; }
+  .cwrap { grid-template-columns:1fr; margin-top:-64px; }
+  .edit { grid-template-columns:1fr; gap:30px; }
+  .stack { height:300px; }
+  .cgrid { grid-template-columns:1fr; }
+  .orb { opacity:.25; right:-12%; }
+}
+
+/* ===== Mobile ===== */
+@media (max-width:560px) {
+  .sec { padding:64px 0; }
+  .f2 { grid-template-columns:1fr; }
+  .logo img { height:44px; }
+  .hero .wrap { padding-top:84px; }
+  .pgrid, .igrid { grid-template-columns:1fr; }
+  .ic { height:280px; }
+  .dust i:nth-child(n+8) { display:none; }
+}
+
+/* ===== Touch devices: show product preview without hover ===== */
+@media (hover:none) {
+  .pc .plist { max-height:110px; opacity:.95; margin-bottom:10px; }
+  .pc.open .plist { max-height:900px; }
+}
+
+/* ===== Mobile polish ===== */
+@media (max-width:940px) {
+  .bar { height:68px; }
+  .logo img { height:46px; }
+  .emblem { right:-14%; top:16%; margin-top:0; width:78vw; opacity:.16; }
+  .ring, .orbit { display:none; }
+  .hero h1 { font-size:clamp(2rem,8.6vw,3.6rem); }
+}
+@media (max-width:560px) {
+  body { font-size:16px; }
+  .wrap { padding:0 18px; }
+  .phero { padding:118px 0 48px; }
+  .hero .wrap { padding-top:72px; }
+  .hero p.lead { font-size:1rem; }
+  .cta .btn { flex:1 1 100%; text-align:center; min-height:50px; }
+  .btn { min-height:48px; }
+  .stats { gap:8px; }
+  .stat span { font-size:.62rem; letter-spacing:.06em; }
+  .track { font-size:.95rem; gap:30px; }
+  .track span::after { margin-left:30px; }
+  input, select, textarea { font-size:16px; }
+  #search { max-width:none; flex:1 1 100%; }
+  #chips { flex-wrap:nowrap !important; overflow-x:auto; padding-bottom:6px; width:100%; -webkit-overflow-scrolling:touch; }
+  .chip { white-space:nowrap; min-height:44px; }
+  .pc { min-height:270px; padding:22px; }
+  .gmap { height:230px; }
+  .fab { width:46px; height:46px; right:14px; }
+  #wa { bottom:calc(14px + env(safe-area-inset-bottom,0px)); }
+  #top { bottom:calc(68px + env(safe-area-inset-bottom,0px)); }
+  #asst { bottom:calc(122px + env(safe-area-inset-bottom,0px)); }
+  #panel { right:14px; bottom:calc(176px + env(safe-area-inset-bottom,0px)); }
+  .hrs td { padding-right:16px; }
+  footer { padding-bottom:calc(24px + env(safe-area-inset-bottom,0px)); }
+}
+@media (max-width:560px) {
+  .tiles { grid-template-columns:1fr; }
+  .fcard { padding:22px; }
+  .cphero { padding-bottom:100px; }
+  .mapbox iframe { height:300px; }
+  .mapbox .btn { left:12px; right:12px; bottom:12px; }
+}
+@media (max-width:360px) { h1 { font-size:1.9rem; } .logo img { height:40px; } }
+
+/* Mobile menu CTA keeps its larger padding */
+@media (max-width:940px) { #nav a.nav-cta { padding:17px; } }
