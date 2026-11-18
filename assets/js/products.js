@@ -16,13 +16,15 @@ const PRODUCTS = [
 ];
 
 /* ===== Helpers ===== */
+/* Soft pastel hues used for card tints (sage, sand, mint, peach, sky, butter) */
+const HUES = [92, 38, 165, 24, 205, 58];
 const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;" }[c]));
 const hi = (s, q) => (q ? esc(s).replace(new RegExp("(" + q.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + ")", "ig"), "<mark>$1</mark>") : esc(s));
 
 /* ===== Product card markup ===== */
 function productCard(p, i, q) {
   const num = String(PRODUCTS.indexOf(p) + 1).padStart(2, "0");
-  return `<article class="pc reveal in" style="--h:${92 + PRODUCTS.indexOf(p) * 7}">
+  return `<article class="pc reveal in" style="--h:${HUES[PRODUCTS.indexOf(p) % HUES.length]}">
     <span class="pn">${num}</span>
     <h3>${hi(p.name, q)}</h3>
     <p class="pcount">${p.items.length} products</p>

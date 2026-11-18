@@ -6,7 +6,7 @@ Static website: HTML5, CSS3 and vanilla JavaScript. No build step, no framework.
 - `index.html`, `about.html`, `products.html`, `industries.html`, `contact.html`
 - `assets/css/` style.css (layout), animations.css (loader and motion), responsive.css (breakpoints)
 - `assets/js/` main.js (header, footer, form, config), loader.js (intro), animations.js (scroll effects), products.js (product data)
-- `assets/images/` logo.jpeg (original), logo.png (background removed, for light areas), logo-light.png (recoloured for dark green areas)
+- `assets/images/` logo.jpeg (original), logo-hd.png (2115x1743 HD, transparent, dark text), logo-hd-light.png (HD, light text for dark backgrounds), logo.png (720px web version used by the site), logo-light.png (web version for dark backgrounds)
 - `robots.txt`, `sitemap.xml`
 
 ## Run locally
@@ -36,3 +36,6 @@ Before launch:
 - Loader: first page in a session shows the full cinematic 00-100% intro (about 3 seconds); later pages show a quick 00-100% loader (under 1 second). Progress is gated by real readiness (logo, fonts, page load). Reduced-motion users skip it.
 - Stats and the ingredient marquee are computed from `products.js`, so they only show real data.
 - GSAP is not used; effects use CSS and IntersectionObserver for speed.
+
+- Theme: white and off-white with soft pastel section tints. Colours are CSS variables at the top of `assets/css/style.css` (`--sage`, `--mist`, `--sand` for tints; `--forest`, `--olive`, `--lime` for accents).
+- The HD logo is a clean, smoothed 6x enlargement of the supplied JPEG. For true vector quality (SVG/AI), ask the logo designer for the source file.

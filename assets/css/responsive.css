@@ -1,12 +1,12 @@
 /* ===== Tablet ===== */
 @media (max-width:940px) {
   .burger { display:block; }
-  #nav { position:fixed; top:0; left:0; right:0; bottom:0; height:100vh; height:100dvh; background:linear-gradient(160deg,#0c250c,#173F16); flex-direction:column; align-items:stretch; justify-content:flex-start; gap:0; padding:100px 26px calc(28px + env(safe-area-inset-bottom,0px)); overflow-y:auto; transform:translateY(-102%); transition:transform .6s var(--ease); }
+  #nav { position:fixed; top:0; left:0; right:0; bottom:0; height:100vh; height:100dvh; background:linear-gradient(170deg,#FFFFFF,#F1F5E6); flex-direction:column; align-items:stretch; justify-content:flex-start; gap:0; padding:100px 26px calc(28px + env(safe-area-inset-bottom,0px)); overflow-y:auto; transform:translateY(-102%); transition:transform .6s var(--ease); }
   #nav.open { transform:none; }
-  #nav a:not(.nav-cta) { display:flex; justify-content:space-between; align-items:center; font:500 1.6rem var(--head); letter-spacing:0; padding:15px 0; border-bottom:1px solid rgba(255,255,255,.1); }
-  #nav a:not(.nav-cta)::after { position:static; width:auto; height:auto; background:none; content:"\2192"; color:var(--lime); opacity:.6; font:400 1.1rem var(--body); transition:transform .3s; }
+  #nav a:not(.nav-cta) { display:flex; justify-content:space-between; align-items:center; font:500 1.6rem var(--head); letter-spacing:0; padding:15px 0; border-bottom:1px solid var(--line); color:var(--forest); }
+  #nav a:not(.nav-cta)::after { position:static; width:auto; height:auto; background:none; content:"\2192"; color:var(--olive); opacity:.8; font:400 1.1rem var(--body); transition:transform .3s; }
   #nav a:not(.nav-cta):hover::after { width:auto; transform:translateX(4px); }
-  #nav a.on { color:var(--lime); }
+  #nav a.on { color:var(--olive-d); }
   #nav .nav-cta { margin-top:26px; padding:17px; justify-content:center; font-size:.82rem; }
   #nav.open a { animation:rise .5s var(--ease) both; }
   #nav.open a:nth-child(2) { animation-delay:.05s; }
@@ -100,3 +100,13 @@
 /* ===== Footer columns by screen size ===== */
 @media (max-width:1024px) { .fgrid { grid-template-columns:1fr 1fr; gap:32px; } }
 @media (max-width:560px) { .fgrid { grid-template-columns:1fr; gap:28px; } }
+
+/* ===== Phone fixes: numbers, floating buttons, hero indicator ===== */
+@media (max-width:560px) {
+  .pc { padding:64px 22px 22px; }
+  #asst, #panel { display:none; }
+  .hero .scroll { display:none; }
+  .fab { width:44px; height:44px; }
+  #top { bottom:calc(66px + env(safe-area-inset-bottom,0px)); }
+  footer { padding-bottom:calc(84px + env(safe-area-inset-bottom,0px)); }
+}

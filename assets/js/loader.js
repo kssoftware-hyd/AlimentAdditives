@@ -11,7 +11,7 @@
 
   body.insertAdjacentHTML("afterbegin",
     '<div id="loader" class="' + (quick ? "quick" : "full") + '" role="status" aria-live="polite"><div class="dust" id="dust"></div><div class="l-giant" aria-hidden="true">ALIMENT ADDITIVES</div><div class="l-in">' +
-    '<div class="l-logo"><img id="l-img" src="assets/images/logo-light.png" alt="Aliment Additives" width="352" height="290"></div>' +
+    '<div class="l-logo"><img id="l-img" src="assets/images/logo.png" alt="Aliment Additives" width="352" height="290"></div>' +
     '<div class="l-bar"><i id="bar"></i></div><div class="l-msg" id="msg">' + MSGS[0] + '</div><div class="l-pct" id="pct">0%</div>' +
     '<div class="l-end" id="lend">YOUR TRUSTED PARTNER IN FOOD INGREDIENTS.</div></div></div>');
 
