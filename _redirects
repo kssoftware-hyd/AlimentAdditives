@@ -1,0 +1,8 @@
+# Netlify redirects (301 = permanent)
+http://www.alimentad.com/*   https://alimentad.com/:splat   301!
+https://www.alimentad.com/*  https://alimentad.com/:splat   301!
+/index.html                  /                                301
+/juice-concentrate           /beverage-juice-concentrate.html 301
+/juice-concentrate.html      /beverage-juice-concentrate.html 301
+/juice-concentrate-supplier-uae  /beverage-juice-concentrate.html 301
+/beverage-juice-concentrate  /beverage-juice-concentrate.html 301

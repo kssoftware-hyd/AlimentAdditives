@@ -2,17 +2,16 @@
 const CFG = {
   email: "info@alimentad.com",
   sales: "sales@alimentad.com",
-  whatsapp: "",        /* e.g. "9715XXXXXXXX" (country code, no + or spaces) */
-  formEndpoint: ""     /* your backend or form service URL; empty = email fallback */
+  whatsapp: "971585589794"   /* +971 58 558 9794 - contact form messages are sent to this WhatsApp number */
 };
 const ADDRESS = "Industrial Area Umm Al Quwain - Emirate of Umm Al Quwain - United Arab Emirates";
-const NAV = [["index.html","HOME","home"],["about.html","ABOUT US","about"],["products.html","PRODUCTS","products"],["industries.html","INDUSTRIES","industries"],["index.html#why","WHY CHOOSE US","why"],["contact.html","CONTACT","contact"]];
+const NAV = [["index.html","HOME","home"],["about.html","ABOUT US","about"],["products.html","PRODUCTS","products"],["industries.html","INDUSTRIES","industries"],["beverage-juice-concentrate.html","JUICE CONCENTRATE","juice"],["index.html#why","WHY CHOOSE US","why"],["contact.html","CONTACT","contact"]];
 const page = document.body.dataset.page;
 const waLink = CFG.whatsapp ? `https://wa.me/${CFG.whatsapp}?text=${encodeURIComponent("Hello Aliment Additives, I would like to enquire about food ingredients.")}` : "contact.html";
 
 /* ===== Header ===== */
 document.getElementById("site-header").innerHTML = `<div class="wrap bar">
-  <a class="logo" href="index.html" aria-label="Aliment Additives FZE home"><img src="assets/images/logo.png" alt="Aliment Additives logo" width="68" height="56"><span class="brand">ALIMENT ADDITIVES <em>FZE</em></span></a>
+  <a class="logo" href="index.html" aria-label="Aliment Additives home"><img src="assets/images/logo-sm.png" alt="Aliment Additives logo" width="68" height="56"><span class="brand">ALIMENT ADDITIVES</span></a>
   <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><i></i></button>
   <nav id="nav" aria-label="Main">${NAV.map((n) => `<a href="${n[0]}" class="${n[2] === page ? "on" : ""}">${n[1]}</a>`).join("")}<a class="nav-cta" href="contact.html">REQUEST A QUOTE<i data-lucide="arrow-right"></i></a></nav></div>`;
 document.getElementById("burger").onclick = () => {
@@ -24,11 +23,11 @@ document.getElementById("burger").onclick = () => {
 
 /* ===== Footer and floating elements ===== */
 document.getElementById("site-footer").innerHTML = `<div class="wrap"><div class="fgrid">
-  <div><a class="logo" href="index.html"><img src="assets/images/logo.png" alt="Aliment Additives logo" width="92" height="76" loading="lazy"><span class="brand">ALIMENT ADDITIVES <em>FZE</em></span></a><p>Your Trusted Partner in Food Ingredients. A UAE-based food ingredients and specialty additives trading company.</p></div>
-  <div><h3>QUICK LINKS</h3><a href="about.html">About Us</a><a href="products.html">Products</a><a href="industries.html">Industries</a><a href="index.html#why">Why Choose Us</a><a href="contact.html">Contact</a></div>
-  <div><h3>PRODUCTS</h3>${PRODUCTS.slice(0, 6).map((p) => `<a href="products.html">${p.name}</a>`).join("")}<a href="products.html">All categories</a></div>
-  <div><h3>CONTACT</h3><p class="cinfo"><i data-lucide="map-pin"></i>${ADDRESS}</p><a class="cinfo" href="mailto:${CFG.email}"><i data-lucide="mail"></i>${CFG.email}</a><a class="cinfo" href="mailto:${CFG.sales}"><i data-lucide="mail"></i>${CFG.sales}</a><p class="cinfo"><i data-lucide="clock"></i>Mon–Sat 09:00 AM – 06:00 PM, Sun Closed</p><a class="btn sm" href="${waLink}" ${CFG.whatsapp ? 'target="_blank" rel="noopener"' : ""}>WHATSAPP ENQUIRY<i data-lucide="message-circle"></i></a></div>
-  </div><div class="fine"><p>© 2026 Aliment Additives FZE. All rights reserved.</p><p class="dev">Designed &amp; Developed by<a href="https://kssoftware.co.in/" target="_blank" rel="noopener">KS Software</a></p></div></div>`;
+  <div><a class="logo" href="index.html"><img src="assets/images/logo-sm.png" alt="Aliment Additives logo" width="92" height="76" loading="lazy"><span class="brand">ALIMENT ADDITIVES</span></a><p>Your Trusted Partner in Food Ingredients. A UAE-based food ingredients and specialty additives trading company.</p></div>
+  <div><h3>QUICK LINKS</h3><a href="about.html">About Us</a><a href="products.html">Products</a><a href="industries.html">Industries</a><a href="beverage-juice-concentrate.html">Juice Concentrate</a><a href="index.html#why">Why Choose Us</a><a href="contact.html">Contact</a></div>
+  <div><h3>PRODUCTS</h3>${PRODUCTS.slice(0, 6).map((p) => `<a href="${p.slug}.html">${p.name}</a>`).join("")}<a href="products.html">All categories</a></div>
+  <div><h3>CONTACT</h3><p class="cinfo"><i data-lucide="map-pin"></i>${ADDRESS}</p><a class="cinfo" href="mailto:${CFG.email}"><i data-lucide="mail"></i>${CFG.email}</a><a class="cinfo" href="mailto:${CFG.sales}"><i data-lucide="mail"></i>${CFG.sales}</a><a class="cinfo" href="${waLink}" target="_blank" rel="noopener"><i data-lucide="phone"></i>+971 58 558 9794</a><p class="cinfo"><i data-lucide="clock"></i>Mon–Sat 09:00 AM – 06:00 PM, Sun Closed</p><a class="btn sm" href="${waLink}" ${CFG.whatsapp ? 'target="_blank" rel="noopener"' : ""}>WHATSAPP ENQUIRY<i data-lucide="message-circle"></i></a></div>
+  </div><div class="fine"><p>© 2026 Aliment Additives. All rights reserved.</p><p class="dev">Designed &amp; Developed by<a href="https://kssoftware.co.in/" target="_blank" rel="noopener">KS Software</a></p></div></div>`;
 document.body.insertAdjacentHTML("beforeend", `<div id="prog"></div>
   <button class="fab" id="asst" aria-label="Enquiry assistant" aria-expanded="false"><i data-lucide="mail"></i></button>
   <div id="panel"><b>Enquiry assistant</b><p>This is an enquiry shortcut, not live customer support. Send your requirement and our team will reply during business hours.</p><a class="btn sm" href="contact.html">SEND AN ENQUIRY<i data-lucide="send"></i></a></div>
@@ -48,9 +47,11 @@ if (wa2) { wa2.href = waLink; if (CFG.whatsapp) { wa2.target = "_blank"; wa2.rel
 const form = document.getElementById("form");
 if (form) {
   const sel = document.getElementById("pr");
-  sel.innerHTML = '<option value="">Select (optional)</option>' + PRODUCTS.map((p) => `<option>${p.name}</option>`).join("") + "<option>Other</option>";
+  sel.innerHTML = '<option value="">Select (optional)</option>' + PRODUCTS.map((p) => `<option>${p.name}</option>`).join("") + "<option>Beverage Juice Concentrate</option><option>Other</option>";
   const wanted = new URLSearchParams(location.search).get("product");
   if (wanted) sel.value = wanted;
+  const item = new URLSearchParams(location.search).get("item");
+  if (item) document.getElementById("ms").value = "I would like a quote for " + item + ". Please share availability, specifications and a commercial offer.";
 
   /* Validation rules: true = valid, string = error message */
   const RULES = {
@@ -67,24 +68,27 @@ if (form) {
   };
   Object.keys(RULES).forEach((id) => document.getElementById(id).addEventListener("blur", () => check(id)));
 
-  form.addEventListener("submit", async (e) => {
+  /* Submit: validate, then open WhatsApp with the enquiry pre-filled for +971 58 558 9794 */
+  form.addEventListener("submit", (e) => {
     e.preventDefault();
-    const st = document.getElementById("status"), btn = document.getElementById("sub");
+    const st = document.getElementById("status");
     st.className = "status show";
     if (!Object.keys(RULES).map(check).every(Boolean)) { st.classList.add("fail"); st.textContent = "Please fix the highlighted fields."; return; }
-    const data = { name:fn.value, company:co.value, email:em.value, phone:ph.value, country:ct.value, product:sel.value, message:ms.value };
-    const orig = btn.innerHTML; btn.disabled = true; btn.textContent = "SENDING...";
-    try {
-      if (CFG.formEndpoint) {
-        const res = await fetch(CFG.formEndpoint, { method:"POST", headers:{ "Content-Type":"application/json" }, body:JSON.stringify(data) });
-        if (!res.ok) throw new Error("send failed");
-        st.textContent = "Thank you. Your enquiry has been sent."; form.reset();
-      } else {
-        location.href = `mailto:${CFG.email}?subject=${encodeURIComponent("Enquiry: " + (data.product || "General"))}&body=${encodeURIComponent(Object.entries(data).map(([k, v]) => k + ": " + v).join("\n"))}`;
-        st.textContent = "Your email app should open with the enquiry ready to send.";
-      }
-    } catch (err) { st.classList.add("fail"); st.textContent = "Could not send. Please email us directly."; }
-    btn.disabled = false; btn.innerHTML = orig; hydrateIcons(btn);
+    const v = (id) => document.getElementById(id).value.trim();
+    const text = [
+      "*New website enquiry - Aliment Additives*",
+      "Name: " + v("fn"),
+      v("co") && "Company: " + v("co"),
+      "Email: " + v("em"),
+      v("ph") && "Phone: " + v("ph"),
+      v("ct") && "Country: " + v("ct"),
+      v("pr") && "Product interest: " + v("pr"),
+      "Message: " + v("ms")
+    ].filter(Boolean).join("\n");
+    const url = "https://wa.me/" + CFG.whatsapp + "?text=" + encodeURIComponent(text);
+    st.textContent = "Opening WhatsApp... tap Send in WhatsApp to deliver your enquiry.";
+    const win = window.open(url, "_blank", "noopener");
+    if (!win) location.href = url;
   });
 }
 

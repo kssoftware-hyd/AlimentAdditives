@@ -7,7 +7,7 @@
   let seen = null;
   try { seen = sessionStorage.getItem("aaSeen"); } catch (e) {}
   const quick = !!seen;
-  const MSGS = ["Preparing Quality Ingredients...", "Connecting Global Supply Solutions...", "Building Trusted Partnerships...", "Welcome to Aliment Additives FZE."];
+  const MSGS = ["Preparing Quality Ingredients...", "Connecting Global Supply Solutions...", "Building Trusted Partnerships...", "Welcome to Aliment Additives."];
 
   body.insertAdjacentHTML("afterbegin",
     '<div id="loader" class="' + (quick ? "quick" : "full") + '" role="status" aria-live="polite"><div class="dust" id="dust"></div><div class="l-giant" aria-hidden="true">ALIMENT ADDITIVES</div><div class="l-in">' +

@@ -1,23 +1,23 @@
 /* ===== Product data (from the client's Product List PDF) ===== */
 /* To add or change products, edit this file only. */
 const PRODUCTS = [
-  { name:"Acids & Acidulants", group:"Additives & Texture", items:["Acetic Acid","Citric Acid","Citric Acid Monohydrate","Citric Acid Anhydrous","Lactic Acid","Malic Acid","Phosphoric Acid","Sodium Acetate","Trisodium Citrate"] },
-  { name:"Thickeners & Stabilizers", group:"Additives & Texture", items:["Carrageenan (Kappa & Iota)","Guar Gum","Locust Bean Gum","Modified Starch","Native Starch","Potato Starch","Pre-gelatinized Starch","Rice Starch","Xanthan Gum"] },
-  { name:"Binders & Texturizers", group:"Additives & Texture", items:["CMC (Carboxymethyl Cellulose)","HPMC (Hydroxypropyl Methylcellulose)","Methyl Cellulose","Ethyl Cellulose","Microcrystalline Cellulose","Cellulose Gum","Pectin","Sorbitol","Tapioca Starch"] },
-  { name:"Minerals", group:"Nutrition & Function", items:["Calcium Acetate","Calcium Ascorbate","Calcium Carbonate","Calcium Chloride","Calcium Gluconate","Calcium Propionate","Calcium Phosphate","Carbonates (Capsanthin)","Chromium","Cocoa Powder","Collagen","Co-enzyme"] },
-  { name:"Enzymes", group:"Enzymes, Dairy & Oils", items:["Amylase (Alpha, Fungal, Bacterial)","Beta Glucanase","Cellulase","Hemicellulase","Glucose Oxidase","Lipase","Pectinase","Protease (Acid, Neutral, Alkaline)","Transglutaminase"] },
-  { name:"Functional Ingredients", group:"Nutrition & Function", items:["Choline Chloride","Creatine Monohydrate","Glutathione","L-Carnitine","L-Glutamine","Omega 3 Fatty Acids (ALA, EPA, DHA)","Omega 6 Fatty Acids (Arachidonic Acid, GLA)","Vitamin & Mineral Premixes (A, D3, E, K, B1, B2, B3, B5, B6, B9, B12)"] },
-  { name:"Sweeteners", group:"Taste & Flavour", items:["Aspartame","Stevia (Natural Sweetener)","Sucralose","Xylitol"] },
-  { name:"Dairy & Milk Products", group:"Enzymes, Dairy & Oils", items:["Lactase Enzymes","Lecithin (Soya)","Liquid Glucose","Milk Protein Concentrate (MPC)","Whey Powder","Whole Milk Powder","Skimmed Milk Powder"] },
-  { name:"Oils & Fats", group:"Enzymes, Dairy & Oils", items:["Palm Oil (RBD)","Vegetable Oils (Soybean, Sunflower, Canola)","Fish Oil","MCT Oil","Refined/Deodorized Oils","Soybean Oil"] },
-  { name:"Flavors & Extracts", group:"Taste & Flavour", items:["Natural Flavors","Artificial Flavors","Vanilla Flavour","Liquid Vanilla","Fruit Extracts","Yeast Extract","Vegetable Extracts"] },
-  { name:"Other Ingredients", group:"Additives & Texture", items:["DAPP (Di-ammonium Phosphate)","PVD Salt (Purified Vacuum Dried Salt)","Magnesium Sulphate","Sodium Chloride"] },
-  { name:"Specialty Ingredients", group:"Nutrition & Function", items:["Tapioca Starch","Tartaric Acid","Thiamine Hydrochloride","TBHQ (tert-butylhydroquinone)","Titanium Dioxide","Tricalcium Phosphate","Turmeric Extract"] }
+  { name:"Acids & Acidulants", slug:"acids-and-acidulants", group:"Additives & Texture", items:["Acetic Acid","Citric Acid","Citric Acid Monohydrate","Citric Acid Anhydrous","Lactic Acid","Malic Acid","Phosphoric Acid","Sodium Acetate","Trisodium Citrate"] },
+  { name:"Thickeners & Stabilizers", slug:"thickeners-and-stabilizers", group:"Additives & Texture", items:["Carrageenan (Kappa & Iota)","Guar Gum","Locust Bean Gum","Modified Starch","Native Starch","Potato Starch","Pre-gelatinized Starch","Rice Starch","Xanthan Gum"] },
+  { name:"Binders & Texturizers", slug:"binders-and-texturizers", group:"Additives & Texture", items:["CMC (Carboxymethyl Cellulose)","HPMC (Hydroxypropyl Methylcellulose)","Methyl Cellulose","Ethyl Cellulose","Microcrystalline Cellulose","Cellulose Gum","Pectin","Sorbitol","Tapioca Starch"] },
+  { name:"Minerals", slug:"minerals", group:"Nutrition & Function", items:["Calcium Acetate","Calcium Ascorbate","Calcium Carbonate","Calcium Chloride","Calcium Gluconate","Calcium Propionate","Calcium Phosphate","Carbonates (Capsanthin)","Chromium","Cocoa Powder","Collagen","Co-enzyme"] },
+  { name:"Enzymes", slug:"enzymes", group:"Enzymes, Dairy & Oils", items:["Amylase (Alpha, Fungal, Bacterial)","Beta Glucanase","Cellulase","Hemicellulase","Glucose Oxidase","Lipase","Pectinase","Protease (Acid, Neutral, Alkaline)","Transglutaminase"] },
+  { name:"Functional Ingredients", slug:"functional-ingredients", group:"Nutrition & Function", items:["Choline Chloride","Creatine Monohydrate","Glutathione","L-Carnitine","L-Glutamine","Omega 3 Fatty Acids (ALA, EPA, DHA)","Omega 6 Fatty Acids (Arachidonic Acid, GLA)","Vitamin & Mineral Premixes (A, D3, E, K, B1, B2, B3, B5, B6, B9, B12)"] },
+  { name:"Sweeteners", slug:"sweeteners", group:"Taste & Flavour", items:["Aspartame","Stevia (Natural Sweetener)","Sucralose","Xylitol"] },
+  { name:"Dairy & Milk Products", slug:"dairy-and-milk-products", group:"Enzymes, Dairy & Oils", items:["Lactase Enzymes","Lecithin (Soya)","Liquid Glucose","Milk Protein Concentrate (MPC)","Whey Powder","Whole Milk Powder","Skimmed Milk Powder"] },
+  { name:"Oils & Fats", slug:"oils-and-fats", group:"Enzymes, Dairy & Oils", items:["Palm Oil (RBD)","Vegetable Oils (Soybean, Sunflower, Canola)","Fish Oil","MCT Oil","Refined/Deodorized Oils","Soybean Oil"] },
+  { name:"Flavors & Extracts", slug:"flavors-and-extracts", group:"Taste & Flavour", items:["Natural Flavors","Artificial Flavors","Vanilla Flavour","Liquid Vanilla","Fruit Extracts","Yeast Extract","Vegetable Extracts"] },
+  { name:"Other Ingredients", slug:"other-ingredients", group:"Additives & Texture", items:["DAPP (Di-ammonium Phosphate)","PVD Salt (Purified Vacuum Dried Salt)","Magnesium Sulphate","Sodium Chloride"] },
+  { name:"Specialty Ingredients", slug:"specialty-ingredients", group:"Nutrition & Function", items:["Tapioca Starch","Tartaric Acid","Thiamine Hydrochloride","TBHQ (tert-butylhydroquinone)","Titanium Dioxide","Tricalcium Phosphate","Turmeric Extract"] }
 ];
 
 /* ===== Helpers ===== */
-/* Soft pastel hues used for card tints (sage, sand, mint, peach, sky, butter) */
-const HUES = [92, 38, 165, 24, 205, 58];
+/* Soft pastel hues used for card tints (sky, powder, periwinkle, aqua, cornflower, ice) */
+const HUES = [205, 195, 215, 185, 225, 200];
 const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;" }[c]));
 const hi = (s, q) => (q ? esc(s).replace(new RegExp("(" + q.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + ")", "ig"), "<mark>$1</mark>") : esc(s));
 
@@ -26,7 +26,7 @@ function productCard(p, i, q) {
   const num = String(PRODUCTS.indexOf(p) + 1).padStart(2, "0");
   return `<article class="pc reveal in" style="--h:${HUES[PRODUCTS.indexOf(p) % HUES.length]}">
     <span class="pn">${num}</span>
-    <h3>${hi(p.name, q)}</h3>
+    <h3><a href="${p.slug}.html">${hi(p.name, q)}</a></h3>
     <p class="pcount">${p.items.length} products</p>
     <ul class="plist">${p.items.map((x) => `<li>${hi(x, q)}</li>`).join("")}</ul>
     <div class="prow">
@@ -59,6 +59,9 @@ function renderProductsPage() {
   }
   chips.addEventListener("click", (e) => { if (e.target.dataset.g) { group = e.target.dataset.g; draw(); } });
   document.getElementById("search").addEventListener("input", (e) => { q = e.target.value; draw(); });
+  /* Deep links such as products.html?q=Citric%20Acid pre-fill the search box */
+  const preset = new URLSearchParams(location.search).get("q");
+  if (preset) { q = preset; document.getElementById("search").value = preset; }
   draw();
 }
 

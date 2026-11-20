@@ -1,7 +1,7 @@
-/* ===== Tablet ===== */
-@media (max-width:940px) {
+/* ===== Hamburger menu up to 1180px (the header now has 7 links plus the quote button) ===== */
+@media (max-width:1180px) {
   .burger { display:block; }
-  #nav { position:fixed; top:0; left:0; right:0; bottom:0; height:100vh; height:100dvh; background:linear-gradient(170deg,#FFFFFF,#F1F5E6); flex-direction:column; align-items:stretch; justify-content:flex-start; gap:0; padding:100px 26px calc(28px + env(safe-area-inset-bottom,0px)); overflow-y:auto; transform:translateY(-102%); transition:transform .6s var(--ease); }
+  #nav { position:fixed; top:0; left:0; right:0; bottom:0; height:100vh; height:100dvh; background:linear-gradient(170deg,var(--bg),var(--sage)); flex-direction:column; align-items:stretch; justify-content:flex-start; gap:0; padding:100px 26px calc(28px + env(safe-area-inset-bottom,0px)); overflow-y:auto; transform:translateY(-102%); transition:transform .6s var(--ease); }
   #nav.open { transform:none; }
   #nav a:not(.nav-cta) { display:flex; justify-content:space-between; align-items:center; font:500 1.6rem var(--head); letter-spacing:0; padding:15px 0; border-bottom:1px solid var(--line); color:var(--forest); }
   #nav a:not(.nav-cta)::after { position:static; width:auto; height:auto; background:none; content:"\2192"; color:var(--olive); opacity:.8; font:400 1.1rem var(--body); transition:transform .3s; }
@@ -15,6 +15,11 @@
   #nav.open a:nth-child(5) { animation-delay:.2s; }
   #nav.open a:nth-child(6) { animation-delay:.25s; }
   #nav.open a:nth-child(7) { animation-delay:.3s; }
+  #nav.open a:nth-child(8) { animation-delay:.35s; }
+}
+
+/* ===== Tablet ===== */
+@media (max-width:940px) {
   .cwrap { grid-template-columns:1fr; margin-top:-64px; }
   .edit { grid-template-columns:1fr; gap:30px; }
   .stack { height:300px; }
@@ -89,13 +94,6 @@
 @media (max-width:560px) { .brand { font-size:.8rem; letter-spacing:.04em; } .logo { gap:9px; } footer .brand { font-size:1rem; } }
 @media (max-width:360px) { .brand { font-size:.68rem; letter-spacing:.02em; } }
 
-/* Narrow desktop (941-1060px): tighter nav so logo, name and links never touch */
-@media (max-width:1060px) and (min-width:941px) {
-  #nav { gap:12px; }
-  #nav a { font-size:.62rem; letter-spacing:.05em; }
-  #nav a.nav-cta { padding:8px 11px; }
-  .brand { font-size:.74rem; }
-}
 
 /* ===== Footer columns by screen size ===== */
 @media (max-width:1024px) { .fgrid { grid-template-columns:1fr 1fr; gap:32px; } }

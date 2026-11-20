@@ -1,0 +1,21 @@
+{
+  "name": "Aliment Additives",
+  "short_name": "Aliment",
+  "description": "Food ingredients and additives supplier, UAE",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#EAF5FC",
+  "theme_color": "#EAF5FC",
+  "icons": [
+    {
+      "src": "assets/images/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
