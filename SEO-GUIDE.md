@@ -87,3 +87,9 @@ Nobody can guarantee the number one position. Brand searches usually rank first 
 Primary: beverage juice concentrate supplier UAE, juice concentrate supplier UAE.
 Supporting: fruit juice concentrate UAE, apple juice concentrate, mango juice concentrate, orange juice concentrate, pineapple juice concentrate, juice concentrate for beverage manufacturers, Brix juice concentrate, juice concentrate GCC.
 The page is linked from the header menu on every page, the footer, Home, Industries and Products. Alias URLs (`/juice-concentrate` and similar) redirect to it with a 301 through `_redirects` (Netlify) or `.htaccess` (Apache).
+
+## 11. Juice concentrate section (family page + 8 fruit pages)
+The page `beverage-juice-concentrate.html` follows a product-family layout (breadcrumb, intro with quote button, read-more text, filter chips with counts, product cards, applications, enquiry checklist, related products, why-us block, FAQ). Each card links to its own fruit page:
+orange, apple, mango, pineapple, grape, pomegranate, guava and lemon juice concentrate.
+Target keywords per page: "[fruit] juice concentrate supplier UAE", "[fruit] juice concentrate UAE", "[fruit] concentrate for beverage manufacturers".
+Content rules: do not add Brix values, certificates, packaging sizes or stock claims unless the client confirms them. Add real specification sheets and photos when available, and update the FAQ and JSON-LD to match.

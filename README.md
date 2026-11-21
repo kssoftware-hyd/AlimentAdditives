@@ -38,3 +38,6 @@ Before launch:
 - Category pages are generated from the same data as `products.js` (name, slug, items). If you add or rename products, update the matching category page, the JSON-LD on it and `sitemap.xml`.
 - Enquiry links such as `contact.html?product=Enquiry&item=Citric%20Acid` pre-select the product and pre-fill the message.
 - Add real brochures, photos and certificates later only if the client can supply them.
+
+## Juice concentrate pages
+`beverage-juice-concentrate.html` (family page with filter) and eight fruit pages such as `orange-juice-concentrate.html`. The filter script is `assets/js/juice.js`. To add a fruit, copy a fruit page, update the card in the family page, the ItemList JSON-LD and `sitemap.xml`.

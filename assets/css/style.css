@@ -302,3 +302,22 @@ svg.i { width:1.1em; height:1.1em; stroke:currentColor; fill:none; stroke-width:
 .spec th { text-align:left; background:var(--forest); color:var(--white); padding:12px 16px; font-size:.74rem; letter-spacing:.1em; text-transform:uppercase; }
 .spec td { padding:12px 16px; border-top:1px solid var(--line); vertical-align:top; }
 .spec td:first-child { font-weight:800; color:var(--forest); width:34%; }
+
+/* ===== 20. Juice concentrate family page: intro, cards, related ===== */
+.lead2 { font-size:1.1rem; color:var(--char); max-width:820px; margin:0 0 12px; }
+.readmore { max-width:820px; margin:0 0 12px; }
+.readmore summary { cursor:pointer; font-weight:800; font-size:.78rem; letter-spacing:.1em; text-transform:uppercase; color:var(--forest); padding:6px 0; }
+.readmore[open] summary { margin-bottom:10px; }
+.jc-grid { display:grid; gap:22px; grid-template-columns:repeat(auto-fill,minmax(270px,1fr)); }
+.jc { position:relative; border-radius:14px; border:1px solid var(--line); padding:26px; background:linear-gradient(165deg,hsl(var(--h),60%,96%),hsl(var(--h),58%,89%)); color:var(--char); overflow:hidden; display:flex; flex-direction:column; gap:6px; transition:transform .4s var(--ease), box-shadow .4s; }
+.jc:hover { transform:translateY(-5px); box-shadow:var(--shadow); }
+.jc[hidden] { display:none; }
+.jl { font:500 4.2rem/1 var(--head); color:hsl(var(--h),45%,40%); opacity:.35; position:absolute; right:18px; top:6px; }
+.jt { font-size:.7rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--olive-d); margin:0; }
+.jc h3 { font-size:1.35rem; margin:0; }
+.jc h3 a { text-decoration:none; color:inherit; }
+.jc p { margin:0; color:#33403a; font-size:.92rem; }
+.jc .prow { margin-top:12px; }
+.wc.rel { display:block; text-decoration:none; color:inherit; }
+.wc.rel .lnk { display:inline-block; margin-top:10px; }
+.jt { padding-right:56px; }

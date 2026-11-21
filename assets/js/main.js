@@ -4,6 +4,8 @@ const CFG = {
   sales: "sales@alimentad.com",
   whatsapp: "971585589794"   /* +971 58 558 9794 - contact form messages are sent to this WhatsApp number */
 };
+const DUBAI = "Dubai Branch Office - AB Plaza 8, Dubai - United Arab Emirates";
+const DUBAI_MAP = "https://maps.app.goo.gl/bXoricVvBZL6pHzK7";
 const ADDRESS = "Industrial Area Umm Al Quwain - Emirate of Umm Al Quwain - United Arab Emirates";
 const NAV = [["index.html","HOME","home"],["about.html","ABOUT US","about"],["products.html","PRODUCTS","products"],["industries.html","INDUSTRIES","industries"],["beverage-juice-concentrate.html","JUICE CONCENTRATE","juice"],["index.html#why","WHY CHOOSE US","why"],["contact.html","CONTACT","contact"]];
 const page = document.body.dataset.page;
@@ -26,7 +28,7 @@ document.getElementById("site-footer").innerHTML = `<div class="wrap"><div class
   <div><a class="logo" href="index.html"><img src="assets/images/logo-sm.png" alt="Aliment Additives logo" width="92" height="76" loading="lazy"><span class="brand">ALIMENT ADDITIVES</span></a><p>Your Trusted Partner in Food Ingredients. A UAE-based food ingredients and specialty additives trading company.</p></div>
   <div><h3>QUICK LINKS</h3><a href="about.html">About Us</a><a href="products.html">Products</a><a href="industries.html">Industries</a><a href="beverage-juice-concentrate.html">Juice Concentrate</a><a href="index.html#why">Why Choose Us</a><a href="contact.html">Contact</a></div>
   <div><h3>PRODUCTS</h3>${PRODUCTS.slice(0, 6).map((p) => `<a href="${p.slug}.html">${p.name}</a>`).join("")}<a href="products.html">All categories</a></div>
-  <div><h3>CONTACT</h3><p class="cinfo"><i data-lucide="map-pin"></i>${ADDRESS}</p><a class="cinfo" href="mailto:${CFG.email}"><i data-lucide="mail"></i>${CFG.email}</a><a class="cinfo" href="mailto:${CFG.sales}"><i data-lucide="mail"></i>${CFG.sales}</a><a class="cinfo" href="${waLink}" target="_blank" rel="noopener"><i data-lucide="phone"></i>+971 58 558 9794</a><p class="cinfo"><i data-lucide="clock"></i>Mon–Sat 09:00 AM – 06:00 PM, Sun Closed</p><a class="btn sm" href="${waLink}" ${CFG.whatsapp ? 'target="_blank" rel="noopener"' : ""}>WHATSAPP ENQUIRY<i data-lucide="message-circle"></i></a></div>
+  <div><h3>CONTACT</h3><p class="cinfo"><i data-lucide="map-pin"></i>${ADDRESS}</p><a class="cinfo" href="${DUBAI_MAP}" target="_blank" rel="noopener"><i data-lucide="building-2"></i>${DUBAI}</a><a class="cinfo" href="mailto:${CFG.email}"><i data-lucide="mail"></i>${CFG.email}</a><a class="cinfo" href="mailto:${CFG.sales}"><i data-lucide="mail"></i>${CFG.sales}</a><a class="cinfo" href="${waLink}" target="_blank" rel="noopener"><i data-lucide="phone"></i>+971 58 558 9794</a><p class="cinfo"><i data-lucide="clock"></i>Mon–Sat 09:00 AM – 06:00 PM, Sun Closed</p><a class="btn sm" href="${waLink}" ${CFG.whatsapp ? 'target="_blank" rel="noopener"' : ""}>WHATSAPP ENQUIRY<i data-lucide="message-circle"></i></a></div>
   </div><div class="fine"><p>© 2026 Aliment Additives. All rights reserved.</p><p class="dev">Designed &amp; Developed by<a href="https://kssoftware.co.in/" target="_blank" rel="noopener">KS Software</a></p></div></div>`;
 document.body.insertAdjacentHTML("beforeend", `<div id="prog"></div>
   <button class="fab" id="asst" aria-label="Enquiry assistant" aria-expanded="false"><i data-lucide="mail"></i></button>
