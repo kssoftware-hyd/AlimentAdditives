@@ -8,4 +8,8 @@ https://www.alimentad.com/*  https://alimentad.com/:splat   301!
 /beverage-juice-concentrate  /beverage-juice-concentrate.html 301
 
 /industries.html  /  301
-/mango-juice-concentrate.html  /beverage-juice-concentrate.html  301
+/mango-juice-concentrate.html  /mango-puree-alphonso-totapuri.html  301
+/grape-juice-concentrate.html  /red-grape-juice-concentrate.html  301
+/guava-juice-concentrate.html  /beverage-juice-concentrate.html  301
+/lemon-juice-concentrate.html  /beverage-juice-concentrate.html  301
+/pomegranate-juice-concentrate.html  /beverage-juice-concentrate.html  301
