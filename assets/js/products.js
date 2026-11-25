@@ -22,9 +22,10 @@ const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ "&":"&amp;", "<":"&lt;", ">":"
 const hi = (s, q) => (q ? esc(s).replace(new RegExp("(" + q.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + ")", "ig"), "<mark>$1</mark>") : esc(s));
 
 /* ===== Product card markup ===== */
-function productCard(p, i, q) {
+function productCard(p, i, q, photo) {
   const num = String(PRODUCTS.indexOf(p) + 1).padStart(2, "0");
-  return `<article class="pc reveal in" style="--h:${HUES[PRODUCTS.indexOf(p) % HUES.length]}">
+  const img = photo ? ` pc-img" data-photo style="--img:url(../images/products/${p.slug}.jpg);--h:${HUES[PRODUCTS.indexOf(p) % HUES.length]}` : `" style="--h:${HUES[PRODUCTS.indexOf(p) % HUES.length]}`;
+  return `<article class="pc reveal in${img}">
     <span class="pn">${num}</span>
     <h3><a href="${p.slug}.html">${hi(p.name, q)}</a></h3>
     <p class="pcount">${p.items.length} products</p>
@@ -53,7 +54,7 @@ function renderProductsPage() {
     chips.innerHTML = groups.map((g) => `<button class="chip ${g === group ? "on" : ""}" data-g="${esc(g)}">${esc(g)}</button>`).join("");
     const needle = q.trim().toLowerCase();
     const list = PRODUCTS.filter((p) => (group === "All" || p.group === group) && (!needle || p.name.toLowerCase().includes(needle) || p.items.some((x) => x.toLowerCase().includes(needle))));
-    grid.innerHTML = list.length ? list.map((p) => productCard(p, 0, q.trim())).join("") : '<p class="none">No matching products. Contact us and we will help source it.</p>';
+    grid.innerHTML = list.length ? list.map((p) => productCard(p, 0, q.trim(), true)).join("") : '<p class="none">No matching products. Contact us and we will help source it.</p>';
     hydrateIcons(grid);
     if (needle) grid.querySelectorAll(".pc").forEach((c) => c.classList.add("open"));
   }

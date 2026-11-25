@@ -181,6 +181,23 @@ body:not(.ready) #site-header { opacity:0; transform:translateY(-20px); }
 .lnk { background:none; border:0; color:var(--forest); font:800 .72rem var(--body); letter-spacing:.12em; cursor:pointer; padding:8px 0; border-bottom:1.5px solid var(--olive); text-decoration:none; }
 .arr { display:inline-block; transition:transform .4s; }
 .pc:hover .arr { transform:translateX(6px); }
+/* ===== Products page: photo cards (image + tint + centred title + button) ===== */
+.pc-img { align-items:center; text-align:center; justify-content:center; color:#fff; min-height:300px; padding:34px 24px; border:0; }
+.pc-img::before { background:linear-gradient(rgba(12,38,24,.22),rgba(12,38,24,.34)), var(--img, none), linear-gradient(160deg,hsl(var(--h),42%,34%),hsl(var(--h),48%,22%)); background-size:auto, cover, auto; background-position:center; background-repeat:no-repeat; }
+.pc-img .pn { display:none; }
+.pc-img h3 { font-size:1.65rem; color:#fff; margin:0 0 6px; text-shadow:0 2px 12px rgba(0,0,0,.35); }
+.pc-img h3 a { color:#fff; }
+.pc-img .pcount { color:#fff; opacity:.9; margin:0 0 14px; }
+.pc-img .plist { color:#fff; text-align:center; }
+.pc-img:hover .plist, .pc-img:focus-within .plist { max-height:0; opacity:0; margin-bottom:0; }
+.pc-img.open .plist { max-height:900px; opacity:1; margin-bottom:14px; }
+.pc-img .plist li:nth-child(n+5) { display:none; }
+.pc-img.open .plist li:nth-child(n+5) { display:block; }
+.pc-img .plist li { padding:2px 0; text-shadow:0 1px 8px rgba(0,0,0,.4); }
+.pc-img .prow { flex-direction:column; gap:12px; align-items:center; }
+.pc-img [data-toggle] { background:var(--forest); color:#fff; border:2px solid #fff; border-radius:10px; padding:13px 28px; font-size:.78rem; display:inline-flex; align-items:center; gap:8px; transition:background .3s, transform .3s; }
+.pc-img [data-toggle]:hover { background:var(--olive-d); transform:translateY(-2px); }
+.pc-img a.lnk { color:#fff; border-bottom-color:rgba(255,255,255,.7); }
 .none { padding:30px; text-align:center; color:var(--mute); }
 
 /* ===== 10. Industries ===== */

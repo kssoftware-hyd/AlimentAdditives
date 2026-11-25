@@ -47,6 +47,8 @@
 /* ===== Touch devices: show product preview without hover ===== */
 @media (hover:none) {
   .pc .plist { max-height:110px; opacity:.95; margin-bottom:10px; }
+  .pc-img .plist { max-height:0; opacity:0; margin-bottom:0; }
+  .pc-img.open .plist { max-height:900px; opacity:1; margin-bottom:14px; }
   .pc.open .plist { max-height:900px; }
 }
 
