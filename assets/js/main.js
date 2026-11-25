@@ -7,7 +7,12 @@ const CFG = {
 const DUBAI = "Dubai Branch Office - AB Plaza 8, Dubai - United Arab Emirates";
 const DUBAI_MAP = "https://maps.app.goo.gl/bXoricVvBZL6pHzK7";
 const ADDRESS = "Industrial Area Umm Al Quwain - Emirate of Umm Al Quwain - United Arab Emirates";
-const NAV = [["index.html","HOME","home"],["about.html","ABOUT US","about"],["products.html","PRODUCTS","products"],["industries.html","INDUSTRIES","industries"],["beverage-juice-concentrate.html","JUICE CONCENTRATE","juice"],["index.html#why","WHY CHOOSE US","why"],["contact.html","CONTACT","contact"]];
+const NAV = [["index.html","HOME","home"],["about.html","ABOUT US","about"],["products.html","PRODUCTS","products",[["products.html","Products","products"],["beverage-juice-concentrate.html","Juice and Beverages","juice"]]],["consulting.html","CONSULTING","consulting"],["contact.html","CONTACT US","contact"]];
+const navItem = (n) => {
+  if (!n[3]) return `<a href="${n[0]}" class="${n[2] === page ? "on" : ""}">${n[1]}</a>`;
+  const active = n[3].some((c) => c[2] === page);
+  return `<div class="dd"><a href="${n[0]}" class="${active ? "on" : ""}" aria-haspopup="true">${n[1]}<svg class="dd-ar" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><div class="dd-m">${n[3].map((c) => `<a href="${c[0]}" class="${c[2] === page ? "on" : ""}">${c[1]}</a>`).join("")}</div></div>`;
+};
 const page = document.body.dataset.page;
 const waLink = CFG.whatsapp ? `https://wa.me/${CFG.whatsapp}?text=${encodeURIComponent("Hello Aliment Additives, I would like to enquire about food ingredients.")}` : "contact.html";
 
@@ -15,7 +20,7 @@ const waLink = CFG.whatsapp ? `https://wa.me/${CFG.whatsapp}?text=${encodeURICom
 document.getElementById("site-header").innerHTML = `<div class="wrap bar">
   <a class="logo" href="index.html" aria-label="Aliment Additives home"><img src="assets/images/logo-sm.png" alt="Aliment Additives logo" width="68" height="56"><span class="brand">ALIMENT ADDITIVES</span></a>
   <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><i></i></button>
-  <nav id="nav" aria-label="Main">${NAV.map((n) => `<a href="${n[0]}" class="${n[2] === page ? "on" : ""}">${n[1]}</a>`).join("")}<a class="nav-cta" href="contact.html">REQUEST A QUOTE<i data-lucide="arrow-right"></i></a></nav></div>`;
+  <nav id="nav" aria-label="Main">${NAV.map(navItem).join("")}<a class="nav-cta" href="contact.html">REQUEST A QUOTE<i data-lucide="arrow-right"></i></a></nav></div>`;
 document.getElementById("burger").onclick = () => {
   const open = document.getElementById("nav").classList.toggle("open");
   document.getElementById("burger").classList.toggle("x", open);
@@ -26,9 +31,9 @@ document.getElementById("burger").onclick = () => {
 /* ===== Footer and floating elements ===== */
 document.getElementById("site-footer").innerHTML = `<div class="wrap"><div class="fgrid">
   <div><a class="logo" href="index.html"><img src="assets/images/logo-sm.png" alt="Aliment Additives logo" width="92" height="76" loading="lazy"><span class="brand">ALIMENT ADDITIVES</span></a><p>Your Trusted Partner in Food Ingredients. A UAE-based food ingredients and specialty additives trading company.</p></div>
-  <div><h3>QUICK LINKS</h3><a href="about.html">About Us</a><a href="products.html">Products</a><a href="industries.html">Industries</a><a href="beverage-juice-concentrate.html">Juice Concentrate</a><a href="index.html#why">Why Choose Us</a><a href="contact.html">Contact</a></div>
+  <div><h3>QUICK LINKS</h3><a href="about.html">About Us</a><a href="products.html">Products</a><a href="beverage-juice-concentrate.html">Juice Concentrate</a><a href="consulting.html">Consulting</a><a href="index.html#why">Why Choose Us</a><a href="contact.html">Contact</a></div>
   <div><h3>PRODUCTS</h3>${PRODUCTS.slice(0, 6).map((p) => `<a href="${p.slug}.html">${p.name}</a>`).join("")}<a href="products.html">All categories</a></div>
-  <div><h3>CONTACT</h3><p class="cinfo"><i data-lucide="map-pin"></i>${ADDRESS}</p><a class="cinfo" href="${DUBAI_MAP}" target="_blank" rel="noopener"><i data-lucide="building-2"></i>${DUBAI}</a><a class="cinfo" href="mailto:${CFG.email}"><i data-lucide="mail"></i>${CFG.email}</a><a class="cinfo" href="mailto:${CFG.sales}"><i data-lucide="mail"></i>${CFG.sales}</a><a class="cinfo" href="${waLink}" target="_blank" rel="noopener"><i data-lucide="phone"></i>+971 58 558 9794</a><p class="cinfo"><i data-lucide="clock"></i>Mon–Sat 09:00 AM – 06:00 PM, Sun Closed</p><a class="btn sm" href="${waLink}" ${CFG.whatsapp ? 'target="_blank" rel="noopener"' : ""}>WHATSAPP ENQUIRY<i data-lucide="message-circle"></i></a></div>
+  <div><h3>CONTACT</h3><a class="cinfo" href="${DUBAI_MAP}" target="_blank" rel="noopener"><i data-lucide="building-2"></i>${DUBAI}</a><p class="cinfo"><i data-lucide="map-pin"></i>${ADDRESS}</p><a class="cinfo" href="mailto:${CFG.email}"><i data-lucide="mail"></i>${CFG.email}</a><a class="cinfo" href="mailto:${CFG.sales}"><i data-lucide="mail"></i>${CFG.sales}</a><a class="cinfo" href="${waLink}" target="_blank" rel="noopener"><i data-lucide="phone"></i>+971 58 558 9794</a><p class="cinfo"><i data-lucide="clock"></i>Mon–Sat 09:00 AM – 06:00 PM, Sun Closed</p><a class="btn sm" href="${waLink}" ${CFG.whatsapp ? 'target="_blank" rel="noopener"' : ""}>WHATSAPP ENQUIRY<i data-lucide="message-circle"></i></a></div>
   </div><div class="fine"><p>© 2026 Aliment Additives. All rights reserved.</p><p class="dev">Designed &amp; Developed by<a href="https://kssoftware.co.in/" target="_blank" rel="noopener">KS Software</a></p></div></div>`;
 document.body.insertAdjacentHTML("beforeend", `<div id="prog"></div>
   <button class="fab" id="asst" aria-label="Enquiry assistant" aria-expanded="false"><i data-lucide="mail"></i></button>

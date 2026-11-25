@@ -7,6 +7,12 @@
   #nav a:not(.nav-cta)::after { position:static; width:auto; height:auto; background:none; content:"\2192"; color:var(--olive); opacity:.8; font:400 1.1rem var(--body); transition:transform .3s; }
   #nav a:not(.nav-cta):hover::after { width:auto; transform:translateX(4px); }
   #nav a.on { color:var(--olive-d); }
+  #nav .dd-ar { display:none; }
+  #nav .dd > a { display:flex; }
+  #nav .dd-m { position:static; opacity:1; visibility:visible; transform:none; box-shadow:none; border:0; background:none; padding:0 0 6px 18px; margin:0; min-width:0; }
+  #nav .dd-m::before { display:none; }
+  #nav .dd-m a { font:400 1.15rem var(--head); padding:11px 0; border-radius:0; white-space:normal; color:var(--olive-d); }
+  #nav .dd-m a:hover, #nav .dd-m a.on { background:none; }
   #nav .nav-cta { margin-top:26px; padding:17px; justify-content:center; font-size:.82rem; }
   #nav.open a { animation:rise .5s var(--ease) both; }
   #nav.open a:nth-child(2) { animation-delay:.05s; }

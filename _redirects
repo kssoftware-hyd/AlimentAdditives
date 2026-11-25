@@ -6,3 +6,6 @@ https://www.alimentad.com/*  https://alimentad.com/:splat   301!
 /juice-concentrate.html      /beverage-juice-concentrate.html 301
 /juice-concentrate-supplier-uae  /beverage-juice-concentrate.html 301
 /beverage-juice-concentrate  /beverage-juice-concentrate.html 301
+
+/industries.html  /  301
+/mango-juice-concentrate.html  /beverage-juice-concentrate.html  301

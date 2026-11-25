@@ -10,7 +10,7 @@ const PRODUCTS = [
   { name:"Sweeteners", slug:"sweeteners", group:"Taste & Flavour", items:["Aspartame","Stevia (Natural Sweetener)","Sucralose","Xylitol"] },
   { name:"Dairy & Milk Products", slug:"dairy-and-milk-products", group:"Enzymes, Dairy & Oils", items:["Lactase Enzymes","Lecithin (Soya)","Liquid Glucose","Milk Protein Concentrate (MPC)","Whey Powder","Whole Milk Powder","Skimmed Milk Powder"] },
   { name:"Oils & Fats", slug:"oils-and-fats", group:"Enzymes, Dairy & Oils", items:["Palm Oil (RBD)","Vegetable Oils (Soybean, Sunflower, Canola)","Fish Oil","MCT Oil","Refined/Deodorized Oils","Soybean Oil"] },
-  { name:"Flavors & Extracts", slug:"flavors-and-extracts", group:"Taste & Flavour", items:["Natural Flavors","Artificial Flavors","Vanilla Flavour","Liquid Vanilla","Fruit Extracts","Yeast Extract","Vegetable Extracts"] },
+  { name:"Flavors & Extracts", slug:"flavors-and-extracts", group:"Taste & Flavour", items:["Monosodium Glutamate (MSG)","Natural Flavors","Artificial Flavors","Vanilla Flavour","Liquid Vanilla","Fruit Extracts","Yeast Extract","Vegetable Extracts"] },
   { name:"Other Ingredients", slug:"other-ingredients", group:"Additives & Texture", items:["DAPP (Di-ammonium Phosphate)","PVD Salt (Purified Vacuum Dried Salt)","Magnesium Sulphate","Sodium Chloride"] },
   { name:"Specialty Ingredients", slug:"specialty-ingredients", group:"Nutrition & Function", items:["Tapioca Starch","Tartaric Acid","Thiamine Hydrochloride","TBHQ (tert-butylhydroquinone)","Titanium Dioxide","Tricalcium Phosphate","Turmeric Extract"] }
 ];

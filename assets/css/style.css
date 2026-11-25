@@ -75,6 +75,17 @@ body:not(.ready) #site-header { opacity:0; transform:translateY(-20px); }
 #nav a:not(.nav-cta)::after { content:""; position:absolute; left:0; bottom:0; height:2px; width:0; background:var(--olive); transition:width .35s var(--ease); }
 #nav a:not(.nav-cta):hover::after, #nav a.on::after { width:100%; }
 #nav a.nav-cta { padding:11px 20px; }
+/* Products dropdown */
+#nav .dd { position:relative; }
+#nav .dd > a { display:inline-flex; align-items:center; gap:6px; }
+#nav .dd-ar { transition:transform .3s var(--ease); }
+#nav .dd-m { position:absolute; top:100%; left:-18px; min-width:230px; padding:10px; margin-top:8px; background:#fff; border-radius:14px; box-shadow:0 14px 36px rgba(23,63,22,.16); border:1px solid var(--line); opacity:0; visibility:hidden; transform:translateY(8px); transition:opacity .25s, transform .25s var(--ease), visibility .25s; }
+#nav .dd-m::before { content:""; position:absolute; left:0; right:0; top:-14px; height:14px; }
+#nav .dd-m a { display:block; padding:11px 14px; border-radius:8px; white-space:nowrap; }
+#nav .dd-m a::after { display:none; }
+#nav .dd-m a:hover, #nav .dd-m a.on { background:var(--sage); color:var(--olive-d); }
+#nav .dd:hover .dd-m, #nav .dd:focus-within .dd-m { opacity:1; visibility:visible; transform:none; }
+#nav .dd:hover .dd-ar, #nav .dd:focus-within .dd-ar { transform:rotate(180deg); }
 .nav-cta { display:inline-flex; align-items:center; gap:8px; background:var(--lime); color:var(--forest); border-radius:999px; box-shadow:0 6px 18px rgba(163,205,54,.35); transition:transform .3s var(--ease), box-shadow .3s, background .3s; }
 .nav-cta:hover { background:#b4dc4a; transform:translateY(-2px); box-shadow:0 10px 24px rgba(163,205,54,.45); }
 .nav-cta svg.i { width:15px; height:15px; margin:0; transition:transform .3s; }
