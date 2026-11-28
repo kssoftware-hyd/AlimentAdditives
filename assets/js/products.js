@@ -1,16 +1,16 @@
 /* ===== Product data (from the client's Product List PDF) ===== */
 /* To add or change products, edit this file only. */
 const PRODUCTS = [
-  { name:"Acids & Acidulants", slug:"acids-and-acidulants", group:"Additives & Texture", items:["Acetic Acid","Citric Acid","Citric Acid Monohydrate","Citric Acid Anhydrous","Lactic Acid","Malic Acid","Phosphoric Acid","Sodium Acetate","Trisodium Citrate"] },
-  { name:"Thickeners & Stabilizers", slug:"thickeners-and-stabilizers", group:"Additives & Texture", items:["Carrageenan (Kappa & Iota)","Guar Gum","Locust Bean Gum","Modified Starch","Native Starch","Potato Starch","Pre-gelatinized Starch","Rice Starch","Xanthan Gum"] },
+  { name:"Acids & Acidulants", slug:"acids-and-acidulants", group:"Additives & Texture", items:["Acetic Acid","Citric Acid Anhydrous","Citric Acid Monohydrate","Lactic Acid","Malic Acid","Phosphoric Acid","Sodium Acetate","Sodium Tripolyphosphate","Trisodium Citrate"] },
+  { name:"Thickeners & Stabilizers", slug:"thickeners-and-stabilizers", group:"Additives & Texture", items:["Carrageenan (Kappa & Iota)","Guar Gum","Locust Bean Gum","Modified Starch","Native Potato Starch","Pre-gelatinized Starch","Rice Starch","Xanthan Gum"] },
   { name:"Binders & Texturizers", slug:"binders-and-texturizers", group:"Additives & Texture", items:["CMC (Carboxymethyl Cellulose)","HPMC (Hydroxypropyl Methylcellulose)","Methyl Cellulose","Ethyl Cellulose","Microcrystalline Cellulose","Cellulose Gum","Pectin","Sorbitol","Tapioca Starch"] },
   { name:"Minerals", slug:"minerals", group:"Nutrition & Function", items:["Calcium Acetate","Calcium Ascorbate","Calcium Carbonate","Calcium Chloride","Calcium Gluconate","Calcium Propionate","Calcium Phosphate","Carbonates (Capsanthin)","Chromium","Cocoa Powder","Collagen","Co-enzyme"] },
   { name:"Enzymes", slug:"enzymes", group:"Enzymes, Dairy & Oils", items:["Amylase (Alpha, Fungal, Bacterial)","Beta Glucanase","Cellulase","Hemicellulase","Glucose Oxidase","Lipase","Pectinase","Protease (Acid, Neutral, Alkaline)","Transglutaminase"] },
   { name:"Functional Ingredients", slug:"functional-ingredients", group:"Nutrition & Function", items:["Choline Chloride","Creatine Monohydrate","Glutathione","L-Carnitine","L-Glutamine","Omega 3 Fatty Acids (ALA, EPA, DHA)","Omega 6 Fatty Acids (Arachidonic Acid, GLA)","Vitamin & Mineral Premixes (A, D3, E, K, B1, B2, B3, B5, B6, B9, B12)"] },
-  { name:"Sweeteners", slug:"sweeteners", group:"Taste & Flavour", items:["Aspartame","Stevia (Natural Sweetener)","Sucralose","Xylitol"] },
-  { name:"Dairy & Milk Products", slug:"dairy-and-milk-products", group:"Enzymes, Dairy & Oils", items:["Lactase Enzymes","Lecithin (Soya)","Liquid Glucose","Milk Protein Concentrate (MPC)","Whey Powder","Whole Milk Powder","Skimmed Milk Powder"] },
+  { name:"Sweeteners", slug:"sweeteners", group:"Taste & Flavour", items:["Acesulfame K","Aspartame","Stevia (Natural Sweetener)","Sucralose","Xylitol"] },
+  { name:"Dairy & Milk Products", slug:"dairy-and-milk-products", group:"Enzymes, Dairy & Oils", items:["Lactase Enzymes","Liquid Glucose","Milk Protein Concentrate (MPC)","Whey Powder","Whole Milk Powder","Skimmed Milk Powder"] },
   { name:"Oils & Fats", slug:"oils-and-fats", group:"Enzymes, Dairy & Oils", items:["Palm Oil (RBD)","Vegetable Oils (Soybean, Sunflower, Canola)","Fish Oil","MCT Oil","Refined/Deodorized Oils","Soybean Oil"] },
-  { name:"Flavors & Extracts", slug:"flavors-and-extracts", group:"Taste & Flavour", items:["Monosodium Glutamate (MSG)","Natural Flavors","Artificial Flavors","Vanilla Flavour","Liquid Vanilla","Fruit Extracts","Yeast Extract","Vegetable Extracts"] },
+  { name:"Flavours & Extracts", slug:"flavors-and-extracts", group:"Taste & Flavour", items:["Monosodium Glutamate (MSG)","Natural Flavours","Artificial Flavours","Vanilla Flavour","Liquid Vanilla","Fruit Extracts","Yeast Extract","Vegetable Extracts"] },
   { name:"Other Ingredients", slug:"other-ingredients", group:"Additives & Texture", items:["DAPP (Di-ammonium Phosphate)","PVD Salt (Purified Vacuum Dried Salt)","Magnesium Sulphate","Sodium Chloride"] },
   { name:"Specialty Ingredients", slug:"specialty-ingredients", group:"Nutrition & Function", items:["Tapioca Starch","Tartaric Acid","Thiamine Hydrochloride","TBHQ (tert-butylhydroquinone)","Titanium Dioxide","Tricalcium Phosphate","Turmeric Extract"] }
 ];
@@ -28,7 +28,7 @@ function productCard(p, i, q, photo) {
   return `<article class="pc reveal in${img}">
     <span class="pn">${num}</span>
     <h3><a href="${p.slug}.html">${hi(p.name, q)}</a></h3>
-    <p class="pcount">${p.items.length} products</p>
+    <p class="pcount">${p.items.length} ${p.items.length === 1 ? "product" : "products"}</p>
     <ul class="plist">${p.items.map((x) => `<li>${hi(x, q)}</li>`).join("")}</ul>
     <div class="prow">
       <button class="lnk" data-toggle aria-expanded="false">VIEW PRODUCTS<span class="arr"><i data-lucide="arrow-right"></i></span></button>

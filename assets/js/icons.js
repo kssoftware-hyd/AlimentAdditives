@@ -1,6 +1,7 @@
 /* ===== Inline icon set (Lucide-style paths, no external dependency) ===== */
 /* Use anywhere as: <i data-lucide="arrow-right"></i>  then call hydrateIcons(root) */
 const ICONS = {
+  "smartphone": '<rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/>',
   "arrow-right": '<path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>',
   "arrow-up": '<path d="M12 19V5"/><path d="m5 12 7-7 7 7"/>',
   "mail": '<rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>',

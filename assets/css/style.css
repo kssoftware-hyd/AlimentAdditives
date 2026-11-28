@@ -272,6 +272,12 @@ footer .brand { white-space:normal; font-size:1.05rem; line-height:1.25; }
 .dev a { display:inline; color:var(--forest); font-weight:800; margin-left:6px; padding:0; }
 .dev a:hover { text-decoration:underline; }
 .cinfo svg.i { margin:0 10px 0 0; color:var(--olive); }
+.cmob b { font-weight:800; }
+
+/* Contact page: mobile and landline stacked in one tile */
+.tile.tp { flex-direction:column; gap:14px; }
+.tile.tp .trow { display:flex; gap:14px; align-items:flex-start; text-decoration:none; color:inherit; }
+.tile.tp .trow b { font-weight:800; }
 
 /* ===== 14. Floating elements ===== */
 #prog { position:fixed; top:0; left:0; height:3px; width:0; background:var(--olive); z-index:90; }
