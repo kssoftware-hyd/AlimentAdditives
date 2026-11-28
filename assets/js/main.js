@@ -7,14 +7,14 @@ const CFG = {
 const DUBAI = "Dubai Branch Office - AB Plaza 8, Dubai - United Arab Emirates";
 const DUBAI_MAP = "https://maps.app.goo.gl/bXoricVvBZL6pHzK7";
 const ADDRESS = "Industrial Area Umm Al Quwain - Emirate of Umm Al Quwain - United Arab Emirates";
-const NAV = [["index.html","HOME","home"],["about.html","ABOUT US","about"],["products.html","PRODUCTS","products",[["products.html","Products","products"],["beverage-juice-concentrate.html","Juice and Beverage","juice"]]],["consulting.html","MANAGEMENT CONSULTING","consulting"],["contact.html","CONTACT US","contact"]];
+const NAV = [["index.html","HOME","home"],["about.html","ABOUT US","about"],["products.html","PRODUCTS","products",[["products.html","Ingredient","products"],["beverage-juice-concentrate.html","Juice and Beverage Solutions","juice"]]],["consulting.html","MANAGEMENT CONSULTING","consulting"],["contact.html","CONTACT US","contact"]];
 const navItem = (n) => {
   if (!n[3]) return `<a href="${n[0]}" class="${n[2] === page ? "on" : ""}">${n[1]}</a>`;
   const active = n[3].some((c) => c[2] === page);
   return `<div class="dd"><a href="${n[0]}" class="${active ? "on" : ""}" aria-haspopup="true">${n[1]}<svg class="dd-ar" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><div class="dd-m">${n[3].map((c) => `<a href="${c[0]}" class="${c[2] === page ? "on" : ""}">${c[1]}</a>`).join("")}</div></div>`;
 };
 const page = document.body.dataset.page;
-const waLink = CFG.whatsapp ? `https://wa.me/${CFG.whatsapp}?text=${encodeURIComponent("Hello Aliment Additives, I would like to enquire about food ingredients.")}` : "contact.html";
+const waLink = CFG.whatsapp ? `https://wa.me/${CFG.whatsapp}?text=${encodeURIComponent("Hello Aliment Additives, I would like to enquire about your products and services.")}` : "contact.html";
 
 /* ===== Header ===== */
 document.getElementById("site-header").innerHTML = `<div class="wrap bar">
